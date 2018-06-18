@@ -1,0 +1,35 @@
+.login.js__rotate-card
+	.login__title
+		h2.login__title-txt Авторизуйтесь
+	
+	form.form-login#form-login
+		.form-login__input-row
+			.form-login__input-before.form-login__input-before_login
+			input(type='text' class='form-login__input' name='form-login__login' placeholder='Логин')
+		.form-login__input-row
+			.form-login__input-before.form-login__input-before_password
+			input(type='password' class='form-login__input' name='form-login__password' placeholder='Пароль')
+		.form-login__checkbox-block
+			label.form-login__checkbox-label
+				input(type='checkbox' id='checkbox__login' checked tabindex='0').form-login__checkbox 
+				.form-login__checkbox-custom
+				label.form-login__checkbox-text(for='checkbox__login') Я человек
+			
+		.form-login-robot Вы точно не робот?
+		.form-login-radio-row
+			label.form-login-radio-label
+				input.form-login-radio(type='radio' id='form-login-radio-yes' name='form-login-radio' value='yes' checked)
+				.form-login-radio-block
+					.form-login-radio-custom(tabindex='0')
+					label.form-login-radio-text(for='form-login-radio-yes') Да
+				
+			label.form-login-radio-label
+				input(type='radio' id='form-login-radio-no' name='form-login-radio' value='no').form-login-radio
+				.form-login-radio-block
+					.form-login-radio-custom(tabindex='0')
+					label.form-login-radio-text(for='form-login-radio-no') Не уверен
+				
+				
+		.form-login-buttons-row
+			button.form-login-button.form-login-button-main(type='button') На главную
+			button.form-login-button.form-login-button-login(type='submit') Войти

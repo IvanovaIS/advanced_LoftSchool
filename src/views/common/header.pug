@@ -1,0 +1,20 @@
+
+header.header
+	div(class=`${containerHeader}`)
+		.header__row
+			.header__row-left
+				- var SocialItems = [['', '#', 'vk'],['', 'https://github.com/IvanovaIS', 'github'],['','#', 'in']]
+					+socials(SocialItems)
+			.header__row-right
+				include hamburgermenu.pug
+
+						
+					
+			
+		div(class=`${headerMainBg}`)
+			.header__img
+				+image('content/IMG_photo.jpg', 'userpic', 'user-desc__avatar')
+			div(class=`${headerContentClass}`)
+				h2(class=`${headerTitleClass}`) #{headerTitle}
+				div(class=`${headerTextClass}`) #{headerText}
+		block arrow

@@ -1,0 +1,57 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои Работы'
+  - var headerTitle = 'Ирина Иванова'
+	- var headerText = 'Личный сайт веб разработчика'
+	- var headerContentClass = 'header__content'
+	- var headerTitleClass = 'header__title'
+	- var headerTextClass = 'header__text'
+	- var containerHeader = 'container__header'
+	- var headerMainBg = 'header__main_portfoliobg'
+
+block scripts
+  script(src='works.bundle.js')
+  
+block content
+  include ../common/hero.pug
+
+  .section-title
+    .section-title__triangles
+      +section-triangles("#faf8f0", "#faf8f0")
+    .section-title__head
+      +title('Мои работы', 'portfolio_header')
+
+  .slider-container
+    #slider-component
+  
+  section.reviews#reviews-section
+    .container.reviews_container
+      .reviews__title
+        +title('Что обо мне говорят', 'about_header')
+      ul.reviews__list
+        each item in [1, 2]
+          li.reviews__item
+            .reviews__text.text-block
+              p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sint rem corrupti corporis rerum nostrum veritatis, quod deserunt commodi. Delectus nam doloribus consequuntur at ratione quam id vitae repudiandae possimus.
+            .reviews__author
+              .reviews__avatar
+                .reviews__avatar-pic
+                  +image('content/IMG_photo.jpg', 'review author', 'reviews__avatar-image')
+              .reviews__author-data
+                .reviews__name Lorem ipsum dolor
+                .reviews__occ Lorem ipsum dolor
+      .reviews__form-container
+        form.modal-form.modal-form_blured#blurred-form
+          .modal-form__bg
+          .modal-form__title
+            .subtitle Связаться со мной
+          .modal-form__container
+            input(type="text" placeholder="Имя").modal-form__input
+            input(type="text" placeholder="Email").modal-form__input
+            textarea(placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
+          .modal-form__buttons
+            button.modal-form__button Отправить
+            button.modal-form__button Очистить
+
+  include ../common/footer.pug

@@ -1,0 +1,23 @@
+.welcomecard
+	.welcomecard__image
+		+image('content/IMG_photo.jpg', 'userpic', 'user-desc__avatar')
+		
+	.welcomecard__content
+		h2.welcomecard__name Ирина Иванова
+		h3.welcomecard__text Личный сайт веб разработчика
+		
+	.welcomecard__social
+		- var SocialItems = [['welcomecard', '#', 'vk'],['welcomecard', 'https://github.com/IvanovaIS', 'github'],['welcomecard','#', 'in']]
+			+socials(SocialItems, 'welcomecard')
+					
+	.welcomecard__menu
+		ul.welcomecard__menu-list
+			li.welcomecard__menu-item
+				a.welcomecard__menu-link(href='myworks.html') Мои работы
+				
+			li.welcomecard__menu-item
+				a.welcomecard__menu-link(href='about.html') Обо мне
+				
+			li.welcomecard__menu-item
+				a.welcomecard__menu-link(href='blog.html') Блог
+	

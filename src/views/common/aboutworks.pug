@@ -1,0 +1,31 @@
+section.aboutworks.js-blur-background
+	.aboutworks__title
+		h2.title Что обо мне говорят
+
+	.aboutworks__quotes
+		- var qoutes = [['Этот студент проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'dmitr', 'Ковальчук Дмитрий', 'основатель Loftschool'], ['Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'vladimir', 'Сабанцев Владимир', 'преподаватель']]
+			ul.aboutworks__quotes-list
+				each quote in qoutes
+					li.aboutworks__quotes-item
+						blockquote.aboutworks__quotes-content  #{quote[0]}
+						.aboutworks__quotes-person
+							.aboutworks__quotes-photo
+								+image(`works/${quote[1]}.jpg`,'photo','aboutworks__quotes-photo-img')
+							.aboutworks__quotes-data
+								.aboutworks__quotes-name  #{quote[2]}
+								.aboutworks__quotes-position  #{quote[3]}
+
+
+	.aboutworks__form-container.js-blur-wrap
+		.aboutworks__form-container-wrap.js-blur-container
+
+		.aboutworks__form-form
+			.aboutworks__form-title
+				h3.subtitle_blue Связаться со мной
+			form.aboutworks__form#aboutworks__form
+				input.aboutworks__form-input(type='text' name='aboutworks__input-name' placeholder='Имя')
+				input.aboutworks__form-input(type='email' name='aboutworks__input-email' placeholder='Email')
+				textarea.aboutworks__form-textarea(name='aboutworks__textarea' placeholder='Ваше сообщение')
+				.aboutworks__form-buttonsrow
+					button.aboutworks__button.aboutworks__button-submit( type='submit') Отправить
+					button.aboutworks__button.aboutworks__button-reset( type='reset') Очистить

@@ -1,0 +1,17 @@
+section.slider
+	.slider__container
+		.slider__info
+			.slider__info-container
+				.slider__info-title
+					h3.subtitle_blue.subtitle-blue_slider название сайта
+				.slider__info-tags html, css, js
+				a.slider__info-link Посмотреть сайт
+
+		.slider__slides
+			.slider__mainslide 
+				+image('works/work-1.png', 'mainslide','slider__mainslide-img')
+			.slider__buttons
+				button.slider__slidedown(type='button')
+					+image('works/work-2.png', 'previewslide','slider__buttonslide-img')
+				button.slider__slideup(type='button')
+					+image('works/work-3.png','previewslide','slider__buttonslide-img')

@@ -2,9 +2,69 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Обо мне'
+  - var headerTitle = 'Ирина Иванова'
+  - var headerText = 'Личный сайт веб разработчика'
+  - var headerContentClass = 'header__content'
+  - var headerTitleClass = 'header__title'
+  - var headerTextClass = 'header__text'
+  - var containerHeader = 'container__header'
+  - var headerMainBg = 'header__main_portfoliobg'
 
 block scripts
   script(src='about.bundle.js')
 
+block arrow
+  .header__arrow-block
+    include ../common/headerarrow.pug
+
 block content
-  h1 Страничка "Обо Мне"  
+  include ../common/hero.pug
+  include ../common/map.pug
+  include ../common/aboutme.pug
+
+ .about-page
+    section.about
+      .about__triangles
+         +section-triangles('#efeee9', '#eeebdf')
+      .about__cols
+        .about__col-left
+          .about__left-title
+            +title('Обо мне', 'about_header')
+          .about__left-description
+            .user-desc
+              .user-desc__img
+                +image('content/IMG_photo.jpg', 'userpic', 'user-desc__avatar')
+              .user-desc__data
+                .user-desc__data-title
+                  h2.subtitle Кто я
+                .user-desc__data-desc.text-block
+                  p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus dicta iure repudiandae, consectetur eos est ratione atque non dolor aperiam ex labore repellat dolorum rem voluptas ducimus commodi praesentium ab?
+                  p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti natus ad quos? Modi facilis sit soluta dolorem autem nesciunt, sapiente minima accusamus corporis, quae totam eligendi, laudantium doloremque illo. Veritatis.
+                
+        .about__col-right
+          .about__right-title
+            h2.subtitle Чем я могу быть вам полезен
+          .about__right-desc.text-block
+            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, ab quidem, perspiciatis dignissimos sint numquam itaque nisi mollitia cupiditate ducimus commodi assumenda ipsa aliquam, hic quam veniam exercitationem debitis! Sequi.
+          .about__right-content
+            #skills-container
+                  
+    section.section.map
+      #google-map
+      .map__contacts
+        .contacts
+          .contacts__title
+            h2.subtitle Контакты
+          .contacts__content
+            ul.contacts__list
+              li.contacts__item
+                .contacts__icon.contacts__icon_skype
+                .contacts__text skype
+              li.contacts__item
+                .contacts__icon.contacts__icon_envelope
+                .contacts__text irene.ivanovais@gmail.com
+              li.contacts__item
+                .contacts__icon.contacts__icon_phone
+                .contacts__text +7 911 270 83 00
+
+    include ../common/footer.pug

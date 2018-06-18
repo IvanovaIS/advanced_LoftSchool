@@ -1,0 +1,97 @@
+.welcomecard {
+	@include card;
+	backface-visibility: hidden;
+
+	
+}
+.welcomecard__image{text-align: center;}
+
+.welcomecard__ava {
+	border-radius: 50%;
+}
+
+.welcomecard__content {
+	text-align: center;
+	margin-bottom:2.19rem ;
+}
+
+.welcomecard__name {
+	font-weight: 500;
+	color: #455a64;
+	font-size: 1.75rem;
+	
+}
+
+.welcomecard__text{
+	color: rgba(#455a64, 0.8);
+}
+
+.welcomecard__social{
+	margin-bottom: 2.5rem;
+	
+}
+.social__list_welcomecard {
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+}
+
+.social__item_welcomecard{
+	margin-right: 1.56rem;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+.social__icon_welcomecard{
+	width: 2.06rem;
+	height: 1.44rem;
+	fill: rgba($green, 0.5);
+	
+	&:hover {
+		fill: $green;
+	}
+}
+
+
+
+.welcomecard__menu-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.welcomecard__menu-item {
+	border-right: 2px solid #73cac3;
+
+	&:last-child {
+		border-right: none;
+	}
+
+}
+
+.welcomecard__menu-link {
+	@include cardmenu;
+	display: block;
+	width: 100%;
+	height: 100%;
+	
+	
+	white-space: nowrap;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #fff;
+	
+	
+	
+}
+
+.js__rotate-card {
+	backface-visibility: hidden;
+}

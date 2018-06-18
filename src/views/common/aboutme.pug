@@ -1,0 +1,28 @@
+section.aboutme
+    .aboutme__bg
+        svg(viewBox="0 0 100 100" preserveAspectRatio="none").aboutme__bg-left
+          polyline(points='0,40 0,0 100,40 ')
+        svg(viewBox="0 0 100 100" preserveAspectRatio="none").aboutme__bg-right
+          polyline(points='0,40 100,0 100,40 ')
+    .aboutme__column-left
+      
+     
+      .aboutme__title
+        h2.title.title_aboutme Обо мне
+      .aboutme__person
+        .aboutme__avatar
+          +image('content/IMG_photo.jpg', 'userpic', 'user-desc__avatar')
+        .aboutme__content
+          .aboutme__content-title
+            h3.subtitle_blue Кто я
+          .aboutme__content-text
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, laudantium quae voluptatum ipsam dolor quod voluptates minima consequuntur quam, ab ipsum non modi veritatis itaque ut rerum quas inventore rem?
+            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae deleniti quis maiores ipsum porro harum, in minus error. Debitis quos facilis a autem perspiciatis quis nemo eum, enim necessitatibus inventore!
+		  
+    .aboutme__column-right
+      .aboutme__skills
+        h3.subtitle_blue.subtitle-blue_skills Чем я могу быть вам полезна
+      .aboutme__skills-content
+        .aboutme__skills-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae aliquid provident laboriosam iste repellendus accusamus nihil qui, impedit hic quam? Itaque recusandae eveniet quaerat. Ea expedita unde aliquid dignissimos nobis.
+      .aboutme__skills-block
+        include ../common/skills.pug

@@ -1,0 +1,20 @@
+.workspage__title {
+
+	margin: 0 auto;
+	margin-bottom: 0.875rem;
+
+	background: svg-load('works_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
+	background-size: 100%;
+
+	max-width: 31.4375rem;
+	min-height: 10.8125rem;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+

@@ -1,0 +1,12 @@
+.hamburgermenu
+	button(type='button').hamburgermenu__btn.js__hamburgermenu
+		.hamburgermenu__item
+	- var hambItems = [['Мои работы','myworks.html'],['Блог', 'blog.html'],['Обо мне', 'about.html'],['Авторизация', 'index.html']]
+	.hamburgermenu__block
+		button.hamburgermenu-closebtn
+			.hamburgermenu-closebtn-item
+		.hamburgermenu__menu
+			ul.hamburgermenu__list
+				each hambItem in hambItems
+					li.hamburgermenu__menuitem
+						a.hamburgermenu__link.title.title_hamburgermenu(href=`${hambItem[1]}`) #{hambItem[0]}

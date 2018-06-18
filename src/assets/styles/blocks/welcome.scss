@@ -1,0 +1,95 @@
+.welcome {
+	background-image: url(../assets/images/bg/bg_mountains.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	width: 100%;
+	height: 100%;
+	
+	color: #fff;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	
+	padding: 1.25rem;
+	
+}
+
+.welcome__header {
+
+	text-align: right;
+	margin-right: 5rem;
+}
+
+.autorise-btn{
+	font-weight: 500;
+	color: #fff;
+	
+	background-color: transparent;
+	
+	border: 2px solid #fff;
+	border-radius: 5px;
+	
+	
+	padding: 12px 27px;
+	
+	transition: 0.5s;
+	
+	&:hover{
+		background-color: #fff;
+		color: $green;
+	}
+}
+
+.welcome__main	{
+	
+	flex: 1;
+	
+}
+
+.welcome__footer{
+	
+	
+	text-align: center;
+	margin-bottom: 0.9rem;
+}
+
+.welcome__footer-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	justify-content: center;
+}
+
+.welcome__footer-item{
+	font-weight: 300;
+	
+	margin: 0 5px;
+	
+	position: relative;
+	
+	white-space: nowrap;
+	
+	&:after {
+		content: '';
+		display: block;
+		width: 1px;
+		height: 14px;
+		background-color: #fff;
+		
+		position: absolute;
+		top: 5px;
+		right: -5px;
+	}
+	
+	&:last-child:after {
+		background-color: transparent;
+	}
+}

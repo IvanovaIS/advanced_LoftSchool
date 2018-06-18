@@ -1,0 +1,46 @@
+.maincontent_blog{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	justify-content: space-around;
+	
+	margin: 0 auto;
+	padding-top: 4.25rem;	
+
+	
+	padding-left: 7.8rem;
+	padding-right: 19.5rem;
+}
+
+
+.titlesarticles{
+	max-width: 272px;
+	text-align: right;
+	
+	margin-right: 7.5rem;
+
+	
+}
+
+.aricles-titles__item {
+	
+	color:#455a64; 
+ 	padding: 0.625rem;
+	padding-right: 1rem;
+	margin-bottom: 1.56rem;
+}
+
+.aricles-titles__item_active {
+		font-weight: 700;
+		color: #00bfa5;
+	
+	border-right: 3px solid $green;
+	}
+	
+
+	
+
+

@@ -1,0 +1,25 @@
+.menu-list {display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;}
+
+.menu-item {
+	margin-right: 2.5rem;
+	
+	&:last-child {
+		margin-right: 0;
+	}
+	
+}
+
+.menu-link {
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+	transition: 0.5s;
+	
+	&:hover{
+		color: #00bfa5;
+	}
+}

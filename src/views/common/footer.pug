@@ -1,2 +1,20 @@
-footer.footer
-  h2 Copyright &copy;
+.footer-container
+  footer.footer
+    .footer__row.footer__row_top
+      .container.footer__container
+        .footer__col-left
+          ul.footer-menu
+            each item in ['Мои работы', 'Обо мне', "Блок", "Авторизация"]
+              li.footer-menu__item
+                a(href="#" class="footer-menu__link") #{item}
+        .footer__col-right
+          .footer__socials
+            +socials('socials_rounded')
+    .footer__row
+      .container.footer__container
+        .footer__col-left
+          .footer__text 
+            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos neque, nobis optio perferendis atque, excepturi minus perspiciatis voluptatum, corporis ab odit accusantium doloribus est rerum! Iste quo doloremque non velit?
+        .footer__col-right
+          .footer__text
+            | © Ирина Иванова | создано с любовью в LoftSchool | 2018
