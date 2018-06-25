@@ -1,17 +1,17 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Мои Работы'
-  - var headerTitle = 'Ирина Иванова'
-	- var headerText = 'Личный сайт веб разработчика'
-	- var headerContentClass = 'header__content'
-	- var headerTitleClass = 'header__title'
-	- var headerTextClass = 'header__text'
-	- var containerHeader = 'container__header'
-	- var headerMainBg = 'header__main_portfoliobg'
+  var title = 'My Works'
+  var headerTitle = 'Ирина Иванова'
+  var headerText = 'Личный сайт веб разработчика'
+  var headerContentClass = 'header__content'
+  var headerTitleClass = 'header__title'
+  var headerTextClass = 'header__text'
+  var containerHeader = 'container__header'
+  var headerMainBg = 'header__main_portfoliobg'
 
 block scripts
-  script(src='works.bundle.js')
+  script(src='js/works.bundle.js')
   
 block content
   include ../common/hero.pug

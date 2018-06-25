@@ -5,7 +5,7 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
-  mixin section-triangles(fill1, fill2)
+mixin section-triangles(fill1, fill2)
   div.section-header
     .section-header__right
       svg(fill=`${fill1}` viewBox="0 0 1000 150" preserveAspectRatio="none")
@@ -25,3 +25,10 @@ mixin socials(modificator)
       li.socials__item
         a(href="#").socials__link
           +icon(social, 'socials__icon')
+
+mixin articleTitles(artTitles)
+  hi.title artTitles
+
+mixin arrow
+  h1.title 
+

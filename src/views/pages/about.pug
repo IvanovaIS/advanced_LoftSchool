@@ -13,16 +13,16 @@ block variables
 block scripts
   script(src='about.bundle.js')
 
-block arrow
-  .header__arrow-block
-    include ../common/headerarrow.pug
-
 block content
   include ../common/hero.pug
   include ../common/map.pug
   include ../common/aboutme.pug
 
- .about-page
+  +arrow()
+    .header__arrow-block
+      include ../common/headerarrow.pug
+
+  .about-page
     section.about
       .about__triangles
          +section-triangles('#efeee9', '#eeebdf')
