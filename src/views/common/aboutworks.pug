@@ -22,10 +22,16 @@ section.aboutworks.js-blur-background
 		.aboutworks__form-form
 			.aboutworks__form-title
 				h3.subtitle_blue Связаться со мной
-			form.aboutworks__form#aboutworks__form
-				input.aboutworks__form-input(type='text' name='aboutworks__input-name' placeholder='Имя')
-				input.aboutworks__form-input(type='email' name='aboutworks__input-email' placeholder='Email')
-				textarea.aboutworks__form-textarea(name='aboutworks__textarea' placeholder='Ваше сообщение')
+			form.aboutworks__form#js-aboutworks__form(action="server.php" method ="post")
+				.js-aboutworks-field-name-error.js-field-error Ведите свое Имя
+				.js-aboutworks-field-mail-error.js-field-error Введите свой Email
+				.js-aboutworks-field-mes-error.js-field-error Введите сообщение
+				input.aboutworks__form-input.js-abuotworks-input-name(type='text' name='aboutworks__input-name' placeholder='Имя')
+				input.aboutworks__form-input.js-abuotworks-input-email(type='email' name='aboutworks__input-email' placeholder='Email')
+				textarea.aboutworks__form-textarea.js-abuotworks-input-mes(name='aboutworks__textarea' placeholder='Ваше сообщение')
 				.aboutworks__form-buttonsrow
 					button.aboutworks__button.aboutworks__button-submit( type='submit') Отправить
 					button.aboutworks__button.aboutworks__button-reset( type='reset') Очистить
+				.js-aboutworks__form-modal
+					.js-aboutworks__form-modal-text 123
+					button.js-aboutworks__form-btn(type="button") Закрыть

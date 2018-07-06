@@ -3,8 +3,12 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	
+	
 	width: 100%;
-	height: 100%;
+	height: 100vh;
+	
+	margin: 0 auto;
+
 	
 	color: #fff;
 	
@@ -16,6 +20,7 @@
 	flex-direction: column;
 	
 	padding: 1.25rem;
+	
 	
 }
 
@@ -39,9 +44,24 @@
 	
 	transition: 0.5s;
 	
+	z-index: 1000;
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	
+	@include phone {
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
 	&:hover{
 		background-color: #fff;
 		color: $green;
+	}
+	
+	&_done {
+		display: none;
 	}
 }
 
@@ -51,45 +71,4 @@
 	
 }
 
-.welcome__footer{
-	
-	
-	text-align: center;
-	margin-bottom: 0.9rem;
-}
 
-.welcome__footer-list {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	
-	justify-content: center;
-}
-
-.welcome__footer-item{
-	font-weight: 300;
-	
-	margin: 0 5px;
-	
-	position: relative;
-	
-	white-space: nowrap;
-	
-	&:after {
-		content: '';
-		display: block;
-		width: 1px;
-		height: 14px;
-		background-color: #fff;
-		
-		position: absolute;
-		top: 5px;
-		right: -5px;
-	}
-	
-	&:last-child:after {
-		background-color: transparent;
-	}
-}

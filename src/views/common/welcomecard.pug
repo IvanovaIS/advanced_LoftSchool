@@ -1,13 +1,13 @@
-.welcomecard
+.welcomecard.js-weclomecard
 	.welcomecard__image
-		+image('content/IMG_photo.jpg', 'userpic', 'user-desc__avatar')
+		+image('content/IMG_photo.jpg', 'Аватар', 'welcomecard__ava')
 		
 	.welcomecard__content
-		h2.welcomecard__name Ирина Иванова
+		h2.welcomecard__name Анна Сысоева
 		h3.welcomecard__text Личный сайт веб разработчика
 		
 	.welcomecard__social
-		- var SocialItems = [['welcomecard', '#', 'vk'],['welcomecard', 'https://github.com/IvanovaIS', 'github'],['welcomecard','#', 'in']]
+		- var SocialItems = [['welcomecard', 'https://vk.com', 'vk'],['welcomecard', 'https://github.com/IvanovaIS', 'github'],['welcomecard','#', 'in']]
 			+socials(SocialItems, 'welcomecard')
 					
 	.welcomecard__menu

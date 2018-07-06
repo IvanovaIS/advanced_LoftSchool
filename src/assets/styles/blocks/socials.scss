@@ -1,61 +1,80 @@
-.socials {
-  display: flex;
+.social__list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 
-  &_fill_green {
-    .socials__icon {
-      fill: $green;
-    }
-  }
-  &_rounded {
-    .socials__item {
-      margin-left: 10px;
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-    .socials__link {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 1px solid rgba(#fff, .5);
-      position: relative;
-
-      &:hover {
-        background-color: #fff;
-        .socials__icon {
-          fill: #373e42;
-        }
-      }
-    }
-
-    .socials__icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 60%;
-      max-height: 60%;
-    }
-  }
 }
 
-.socials__link {
-  width: 40px;
-  height: 27px;
-  display: block;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  opacity: .5;
-  transition: .3s;
-  &:hover {
-    opacity: 1;
-  }
+.social__item {
+	margin-right: 1.88rem;
+	&:last-child {
+		margin-right: 0;
+	}
 }
 
-.socials__icon {
-  width: 80%;
-  height: 80%;
-  fill: #fff;
+
+.social__icon {
+	width: 1.875rem;
+	height: 1.25rem;
+	fill: rgba(255, 255, 255, 0.5);
+
+	transition: 0.5s;
+
+	&:hover {
+		fill: #fff;
+	}
+}
+
+.social__list_round {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	overflow: visible;
+}
+
+.social__item_round {
+	margin-right: 0.6rem;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		background-color: lightgrey;
+		height: 2.25rem;
+		width: 2.25rem;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		transition: 0.5s;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover:before {
+		background-color: rgba(#555b5e, 0.85);
+	}
+
+}
+
+.social__icon_round {
+	height: 2.23rem;
+	width: 2.23rem;
+	stroke: lightgrey;
+	fill: rgba(#555b5e, 0.85);
+	position: relative;
+	z-index: 20;
+
+	transition: 0.5s;
+
+	&:hover {
+		fill: #fff;
+		stroke: none;
+	}
 }

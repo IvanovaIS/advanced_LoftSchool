@@ -1,11 +1,32 @@
-section.articles
-	ul.articles__list
-		li.articles__item
-			article.article
-				h3.article__title Lorem
-				.article__data XX июня 2018
-				.article__content
-					.article__text
-						p Lorem
-						p Lorem
+#blog
+	script(type="text/x-template")#blog-section
+		.maincontent_blog
+			aside.titlesarticles(ref="aside-block")
+				ul.aricles-titles__list(ref="aside-title")
+					li.aricles-titles__item.js-aside-title(v-for="blogItem in blogContent")
+						blogTitles(
+							:blogItem="blogItem"
+						)
+				button.titlesarticles__button(v-on:click="openAside")
+				
+			section.articles(ref="article-section")
+				ul.articles__list
+					li.articles__item(v-for="blogItem in blogContent" ref="article-block")
+						blogArticlesContent(
+							:blogItem="blogItem"
+							)
+		
+	script(type="text/x-template")#blog-titles
+		h3.aricles-titles__title.js-article-title {{blogItem.title}}
+		
+
+		
+		
+					
+	script(type="text/x-template")#blog-articles-content
+		article.article.js-article
+			h3.article__title {{blogItem.title}}
+			.article__data {{blogItem.date}}
+			.article__content
+				.article__text(v-html="blogItem.content")
 	

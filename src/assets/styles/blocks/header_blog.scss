@@ -11,10 +11,27 @@
 	flex-direction: column;
 	justify-content: space-between;
 	
+	
+	.header__arrow-block {
+		display: none;
+		
+		@include tablet {
+			display: block;
+		}
+	}
 }
 
+.header__bgtext-icon_blog {
+	fill: rgba(#fff, 0.1);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}  
+
 .header__content_blog {
-	background: svg-load('blog_header.svg', fill=rgba(255, 255, 255, 0.07)) center center no-repeat;
+
 
 	background-size: cover;
 	text-align: center;
@@ -32,11 +49,20 @@
 	&:before {
 		top: 55%;
 		left: -40%;
+		
+		@include phone {
+		left: -60%;
+	}
 	}
 	&:after {
 		top: 55%;
 		right: -40%;
+		
+		@include phone {
+			right: -60%;
 	}
+	}
+	
 	
 }
 

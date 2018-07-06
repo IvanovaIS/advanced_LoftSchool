@@ -1,56 +1,95 @@
 .preloader {
-  background: $green;
-  position: fixed;
-  top: 0;
-  left: -9999px;
-  z-index: 1000;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity .3s;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
 
-  &.active {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
-  }
+	background-color: $green;
+	background-image: url(../assets/images/preloader/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 1;
+	visibility: visible;
+
+	z-index: 2000;
+
+	&_done{
+		opacity: 0;
+		visibility: hidden;
+	}
+
 }
 
-.preloader__animation {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.preloader__circles {
-  width: 112px;
-  height: 112px;
+.preloader__img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 
-.preloader__circle {
-  fill: transparent;
-  stroke-width: 2px;
-  stroke-dasharray: 314;
-  stroke-dashoffset: 314;
-  transform: rotate(-90deg);
-  transform-origin: center center;
-  transition: 1s;
+.preloader__icon-text {
+	margin: 0 auto;
+}
 
-  &_back {
-    stroke: #55cccc;
-  }
+.preloader__circle-above {
+	stroke-dasharray: 68;
+	transition: 0.5s;
+	animation: 1s circleabove infinite linear;
+}
 
-  &_middle {
-    stroke: #b7eeee;
-  }
-  &_front {
-    stroke: #c6e9e9;
-  }
+.preloader__circle-middle {
+	stroke-dasharray: 57;
+	transition: 1s;
+	animation: 1s circlemiddle infinite linear;
+}
+
+.preloader__circle-inner {
+	stroke-dasharray: 43;
+
+	animation: 1s circleinner infinite linear;
+}
+
+@keyframes circleabove {
+	from {
+	stroke-dasharray: 68;
+		
+	}
+	to {
+		stroke-dasharray: 444;	
+	}
+}
+
+@keyframes circlemiddle {
+	from {
+	stroke-dasharray: 57;
+		
+	}
+	to {
+	stroke-dasharray: 354;	
+	}
+}
+
+@keyframes circleinner {
+	from {
+	stroke-dasharray: 43;
+		
+	}
+	to {
+	stroke-dasharray: 275;	
+	}
 }
 
 .preloader__text {
-  fill: #fff;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	color: #fff;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	
 }

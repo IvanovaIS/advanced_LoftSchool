@@ -1,25 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
+//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
 
 @font-face {
   font-family: 'bernier';
-  src: url('/assets/fonts/bernierregular-regular-webfont.woff') format('woff'), 
-  url('/assets/fonts/bernierregular-regular-webfont.woff2') format('woff2');
+  src: url('../assets/fonts/bernierregular-regular-webfont.woff') format('woff'), 
+  url('../assets/fonts/bernierregular-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
-}
-
-
-@mixin roboto($style: 'regular') {
-  font-family: 'Roboto', Helvetica, sans-serif;
+//  font-display: block;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('assets/fonts/roboto-light.woff2') format('woff2'),
-       url('assets/fonts/roboto-light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-light.woff2') format('woff2'),
+         url('../assets/fonts/roboto-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
 
 }
 
@@ -27,11 +22,11 @@
 
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('assets/fonts/roboto-medium.woff2') format('woff2'),
-       url('assets/fonts/roboto-medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-medium.woff2') format('woff2'),
+         url('../assets/fonts/roboto-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
 
 }
 
@@ -39,19 +34,19 @@
 
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('assets/fonts/roboto-regular.woff2') format('woff2'),
-       url('assets/fonts/roboto-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Roboto';
+    src: url('../assets/fonts/roboto-regular.woff2') format('woff2'),
+         url('../assets/fonts/roboto-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 
 }
 
 @font-face {
-  font-family: 'Awesome';
-  src: url('assets/fonts/fontawesome.woff2') format('woff2'),
-       url('assets/fonts/fontawesome.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Awesome';
+    src: url('../assets/fonts/fontawesome.woff2') format('woff2'),
+         url('../assets/fonts/fontawesome.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
 }

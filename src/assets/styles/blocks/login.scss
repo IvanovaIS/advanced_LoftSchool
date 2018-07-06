@@ -1,30 +1,19 @@
 .login {
 	@include card;
-width: 382px;
-//	height: 400px;
-
-
-transform: rotateY(180deg);
+	width: 382px;
+    backface-visibility: hidden;
+	transition: 1.5s;
+	padding-top: 0;
 }
 
 .login__title {
 	text-align: center;
+	padding: 2rem 0; 
 }
 
 .login__title-txt {
+	
 
-
-	@include title(#455a64, 2.1875rem);
-	margin-bottom: 1rem;
-
-	&:before {
-		left: 9%;
-	}
-
-
-	&:after {
-		right: 9%;
-	}
 
 }
 
@@ -37,7 +26,7 @@ transform: rotateY(180deg);
 	flex-direction: column;
 	align-items: center;
 
-	
+    position: relative;
 	width: 100%;
 
 
@@ -52,10 +41,10 @@ transform: rotateY(180deg);
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-    
-	
+
+
 	width: 95%;
-	margin:0 1rem  0.5rem;
+	margin: 0 1rem 0.5rem;
 }
 
 .form-login__input {
@@ -67,10 +56,12 @@ transform: rotateY(180deg);
 	box-sizing: border-box;
 	border: none;
 	content: '000';
-    
+
 	width: 100%;
 
-	
+	&_error {
+		border: 1px solid red;
+	}
 
 }
 
@@ -84,10 +75,16 @@ transform: rotateY(180deg);
 
 .form-login__input-before_login {
 	background: #f0efe9 svg-load('login.svg', fill=#c4cbcd) center center no-repeat;
+	&_error {
+	background: #f0efe9 svg-load('login.svg', fill=red) center center no-repeat;	
+	}
 }
 
 .form-login__input-before_password {
 	background: #f0efe9 svg-load('password.svg', fill=#c4cbcd) center center no-repeat;
+	&_error {
+		background: #f0efe9 svg-load('password.svg', fill=red) center center no-repeat;
+	}
 }
 
 .form-login__checkbox-block {
@@ -133,19 +130,19 @@ transform: rotateY(180deg);
 	margin-bottom: 0.4rem;
 }
 
-.form-login-radio-row{
+.form-login-radio-row {
 	margin-bottom: 2rem;
 	border: 2px soild #000;
 }
 
 .form-login-radio {
 	display: none;
-	
-	&:checked  + .form-login-radio-block .form-login-radio-custom:before {
+
+	&:checked + .form-login-radio-block .form-login-radio-custom:before {
 		opacity: 1;
 	}
-	
-	&:checked  + .form-login-radio-block .form-login-radio-text {
+
+	&:checked + .form-login-radio-block .form-login-radio-text {
 		color: #00bfa5;
 	}
 }
@@ -154,21 +151,22 @@ transform: rotateY(180deg);
 	display: inline-block;
 	margin-right: 2.375rem;
 }
+
 .form-login-radio-custom {
-	
+
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
 	height: 20px;
 	background-color: #fff;
-	
+
 	box-sizing: border-box;
 	border: 1px solid #cdcece;
 	border-radius: 50%;
 
 
 	margin-right: 0.56rem;
-	
+
 	position: relative;
 
 	transition: 0.5s;
@@ -186,7 +184,7 @@ transform: rotateY(180deg);
 		left: 50%;
 		transform: translate(-50%, -50%);
 		opacity: 0;
-		
+
 		transition: 0.3s;
 	}
 }
@@ -195,31 +193,31 @@ transform: rotateY(180deg);
 	display: inline-block;
 	vertical-align: middle;
 }
-	
 
-	
+
+
 .form-login-buttons-row {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
-	
-	
+
+
+
 }
 
-	.form-login-button {
-		@include cardmenu;
-		padding: 0;
-		width: 192px;
-		box-sizing: border-box;
-		padding: 1rem; 	
-		
-		transition: 0.5s;
-		
-		overflow: hidden;
-	}
+.form-login-button {
+	@include cardmenu;
+	padding: 0;
+	width: 192px;
+	box-sizing: border-box;
+	padding: 1rem;
+
+	transition: 0.5s;
+
+	overflow: hidden;
+}
 
 .form-login-button-main {
 	border-bottom-left-radius: 5px;
@@ -227,4 +225,73 @@ transform: rotateY(180deg);
 
 .form-login-button-login {
 	border-bottom-right-radius: 5px;
+}	
+
+.js-error-login {
+  position: absolute;
+	padding: 10px 20px;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	
+	transition: 0.7s;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 50%;
+		transform: translateX(50%);
+		top: -12px;
+
+
+		border-right: 12px solid transparent;
+		border-bottom: 14px solid red;
+		border-left: 12px solid transparent;
+	}
+}
+
+.js-error-login_login {
+	top: 45px;
+	display: none;
+}
+.js-error-login_password {
+	z-index: 10;
+	top: 95px;
+	display: none;
+}
+.js-error-login_checkbox {
+	z-index: 10;
+	top: 159px;
+	display: none;
+}
+.js-error-login_radio {
+	top: 236px;
+	display: none;
+}
+
+.js-sucsess-login {
+	display: none;
+	z-index: 200;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	padding: 22px 50px;
+
+	border-radius: 5px;
+}
+.js-sucsess-text {
+	color: #373e42;
+	margin-bottom: 1.3rem;
+}
+.js-suscess-btn {
+	@include cardmenu;
+	border-radius: 5px;
 }

@@ -1,0 +1,120 @@
+.skills-list {
+	@include tablet {
+		width: 60%;
+		margin: 0 auto 2.8rem;
+		text-align: center;
+	}
+}
+.skills-row__list {
+	margin-bottom: 1.625rem;
+	
+	
+}
+
+.skills-row__title {
+	color: #455a64;
+	font-weight: 500;
+	font-size: 1.75rem;
+	margin-bottom: 1rem;
+	
+	@include phone {
+		font-size: 1.30875rem;
+	}
+
+
+}
+
+.skills-row__list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+     
+	@include tablet {
+		justify-content:  center ;
+	}
+	 
+	@include phone {
+	justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+}
+
+.skills-row__item {
+	
+	padding: 0;
+	margin-right: 2rem;
+	
+	&:last-child {
+		margin-right: 0;
+	}
+	
+	@include netbook {
+		margin-right: 1rem;
+	}
+    
+	@include phone {
+
+		margin-bottom: 1.5rem;
+	}
+	
+}
+
+.skill {
+	margin: 0;
+	padding: 0;
+	display: block;
+	position: relative;
+	width: 120px;
+	height: 120px;
+
+	@include netbook {
+		width: 108px;
+		height: 108px;
+
+	}
+}
+
+.skill__title {
+	color: #00bfa5;
+	font-weight: 300;
+	font-size: 0.87rem;
+
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+	@include netbook {
+		font-size: 0.80125rem;
+	}
+}
+
+.skill__figure {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: rotate(-90deg);
+}
+
+.skill__circle {
+	fill: transparent;
+	width: 120px;
+	height: 120px;
+	stroke: #ccc;
+	stroke-width: 20px;
+}
+
+.skill__circle_above {
+	stroke: $green;
+	stroke-dasharray: 251;
+	stroke-dashoffset: 251;
+	transition: 1.5s;
+}
+
+

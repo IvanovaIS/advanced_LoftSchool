@@ -9,16 +9,21 @@ block variables
   - var headerTextClass = 'header__text_blog'
   - var containerHeader = 'container__header_blog'
   - var headerMainBg = 'header__main'
-  - var artTitles = [['Самое важное в SASS', 'aricles-titles__item_active'],['Приёмы в вёрстке, без которых не обходится ни один сайт', ''],['Самый необходимый набор Gulp плагинов', ''], ['Почему я выбрала Jade', ''], ['Ограничение длины текста через градиент', '']]
+  - var artTitles = [['Lorem', 'aricles-titles__item_active'],['Lorem', ''],['Lorem', ''], ['Lorem', ''], ['Lorem', '']]
+  - var headerbgtext = 'blog'
+  - var wrapModif = ' '
 block scripts
   script(src='js/blog.bundle.js')
 
+block arrow
+  .header__arrow-block
+    a.header__arrow-link(href="#")
+      include ../common/headerarrow.pug
   
 block content
-  include ../common/figure.pug
-  .maincontent_blog
-    
-    aside.titlesarticles
-      +articleTitles(artTitles)
-    include ../common/articles.pug
-    include ../common/footer.pug
+  include ../common/articles.pug
+  include ../common/footer.pug
+
+  
+   //  aside.titlesarticles
+   //      +articleTitles(artTitles)

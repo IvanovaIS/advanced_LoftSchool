@@ -1,48 +1,213 @@
-.about {
-  position: relative;
+.wrapper_aboutpage {
+	background: linear-gradient( #efeee9 ,  #eeebdf 50%);
+	
+	@include tablet {
+		background: #efeee9;
+	}
+}
+.aboutme {
+
+	min-height: 650px;
+
 }
 
-.about__triangles {
-  position: absolute;
-  bottom: 100%;
-  left: 0;
-  right: 0;
+.aboutme__wrapper {
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: relative;
+
+	@include tablet {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
-.about__cols {
-  display: flex;
-  height: 100%;
+
+.aboutme__column-left {
+	width: 50%;
+
+	background-color: #efeee9;
+
+	
+	padding:0 5%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	@include netbook {
+
+		padding: 0 3%;
+
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	@include tablet {
+		width: 100%;
+	}
+
+
+
 }
 
-.about__col-left, .about__col-right {
-  width: 50%;
+.aboutme__title {
+	width: 50%;
+	text-align: center;
+	margin-right: 2rem;
+	white-space: nowrap;
+
+
+
+
+
+
 }
 
-.about__col-left {
-  background: $white;
+.title_aboutme {
+
+
+	background: svg-load('about_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
+	background-size: 100%;
+	padding: 0 2rem;
+
+	&:before {
+		left: -4%;
+		@include phone {
+			left: -10%;
+			top: 1.3rem;
+		}
+	}
+
+	&:after {
+		right: -4%;
+		@include phone {
+			right: -10%;
+			top: 1.3rem;
+		}
+	}
+
+	@include phone {
+		padding: 0 1.2rem;
+
+	}
 }
 
-.about__right-title {
-  text-align: center;
+.aboutme__person {
+	width: 50%;
+
+	@include netbook {
+		width: 100%;
+		text-align: center;
+	}
 }
 
-.about__left-title {
-  text-align: center;
-  margin-top: -50px;
-  margin-bottom: 30px;
+.aboutme__avatar {
+	padding-top: 1rem;
+	margin-bottom: 2rem;
+
+	@include netbook {
+		margin: 0 auto 2rem;
+	}
+
 }
 
-.about__col-right {
-  background: $beige;
-  padding: 0 3%;
+.aboutme__content {
+	@include netbook {
+		width: 80%;
+		text-align: left;
+		margin: 0 auto;
+
+	}
+
+	@include tablet {
+		width: 50%;
+	}
+
+	@include phone {
+		width: 100%;
+	}
 }
 
-.about__left-description {
-  padding: 0 10%;
+.aboutme__content-title {
+	text-align: center;
+	margin-bottom: 2rem;
 }
 
-.hero__menu {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+
+
+
+.aboutme__content-text {
+	color: #455a64;
+	line-height: 1.5em;
+	p {
+		margin-bottom: 1rem;
+	}
+
+
+}
+
+.aboutme__column-right {
+
+
+	
+	padding: 0 2.5%;
+	width: 50%;
+	background-color: #eeebdf;
+	@include tablet {
+		width: 100%;
+	}
+
+	@include tablet {
+		padding-top: 2.5rem;
+	}
+
+}
+
+.aboutme__skills {
+	text-align: center;
+	max-width: 19.69rem;
+	padding: 0 2rem;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+
+
+}
+
+.subtitle-blue_skills {
+
+
+
+	&:after {
+		right: -4rem;
+		@include phone {
+			right: -2rem;
+		}
+
+	}
+
+
+}
+
+.aboutme__skills-text {
+	color: #455a64;
+}
+
+.aboutme__skills-content {
+	margin-bottom: 3.44rem;
+
+	@include tablet {
+		width: 50%;
+		margin: 0 auto 3.44rem;
+	}
+	@include phone {
+		width: 100%;
+	}
 }

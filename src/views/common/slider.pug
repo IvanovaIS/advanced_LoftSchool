@@ -1,17 +1,19 @@
 section.slider
-	.slider__container
-		.slider__info
-			.slider__info-container
+	.slider__container.js-slider
+			.slider__info
+				
 				.slider__info-title
-					h3.subtitle_blue.subtitle-blue_slider название сайта
-				.slider__info-tags html, css, js
-				a.slider__info-link Посмотреть сайт
+					h3.subtitle_blue.subtitle-blue_slider.js-slider-sitename 
+				.slider__info-tags.js-slider-tags 
+				a.slider__info-link.js-slider-link(target='_blank') Перейти на сайт
 
-		.slider__slides
+		
 			.slider__mainslide 
-				+image('works/work-1.png', 'mainslide','slider__mainslide-img')
+				img.slider__mainslide-img.js-mainslide(alt="Mainslide")
+				
 			.slider__buttons
-				button.slider__slidedown(type='button')
-					+image('works/work-2.png', 'previewslide','slider__buttonslide-img')
-				button.slider__slideup(type='button')
-					+image('works/work-3.png','previewslide','slider__buttonslide-img')
+				button.slider__slidedown.js-slide-btndown(type='button')
+					img.slider__buttonslide-img.js-slide-down(alt='previewslide')
+				button.slider__slideup.js-slide-btnup(type='button')
+					img.slider__buttonslide-img.js-slide-up(alt='nextslide')
+					

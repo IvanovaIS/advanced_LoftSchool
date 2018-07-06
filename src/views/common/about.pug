@@ -1,0 +1,24 @@
+section.aboutme
+
+	
+	.aboutme__wrapper
+		.aboutme__column-left
+			.aboutme__title
+				h2.title.title_aboutme Обо мне
+			.aboutme__person
+				.aboutme__avatar
+					+image('content/IMG_photo.jpg', 'Фото', 'aboutme__avatar-img')
+				.aboutme__content
+					.aboutme__content-title
+						h3.subtitle_blue Кто я
+					.aboutme__content-text
+						p Lorem
+						p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. 
+
+		.aboutme__column-right
+			.aboutme__skills
+				h3.subtitle_blue.subtitle-blue_skills Чем я могу быть вам полезна
+			.aboutme__skills-content
+				.aboutme__skills-text Lorem
+			.aboutme__skills-block#aboutme__skills-block
+				include skills.pug

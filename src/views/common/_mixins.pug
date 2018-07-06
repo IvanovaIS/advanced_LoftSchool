@@ -1,34 +1,28 @@
 mixin icon(iconName, iconClass)
   svg(class=`${iconClass}`)
-    use(xlink:href=`/assets/images/icons/sprite.svg#${iconName}`)
+    use(xlink:href=`assets/images/icons/sprite.svg#${iconName}`)
 
 mixin image(imagePath, imageAlt, imageClass)
-  img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
-
-mixin section-triangles(fill1, fill2)
-  div.section-header
-    .section-header__right
-      svg(fill=`${fill1}` viewBox="0 0 1000 150" preserveAspectRatio="none")
-        polygon(points="0,0 0,150 1000,150")
-    .section-header__left
-      svg(fill=`${fill2}` viewBox="0 0 1000 150" preserveAspectRatio="none")
-        polygon(points="1000,0 1000,150 0,150")
-
-mixin title(text, icon) 
-  h1.title
-    +icon(icon, 'title__img')
-    .title__text #{text}
-
-mixin socials(modificator)
-  ul.socials(class=`${modificator ? modificator : ''}`)
-    each social in ['vk', 'github', 'in']
-      li.socials__item
-        a(href="#").socials__link
-          +icon(social, 'socials__icon')
+  img(src=`assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
 mixin articleTitles(artTitles)
-  hi.title artTitles
+  ul.aricles-titles__list
+    each artTitle in artTitles
+      li.aricles-titles__item(class=`${artTitle[1]}`)= artTitle[0]
+	  
+mixin socials(SocialItems, socialMode)
+  
+  ul.social__list(class=`social__list_${socialMode}`)
+    each SocialItem in SocialItems  
+      li.social__item(class=`social__item_${SocialItem[0]}`)
+        a.social__link(href=`${SocialItem[1]}`)
+          +icon(`${SocialItem[2]}`, 'social__icon' + ` social__icon_${SocialItem[0]}`)  
 
-mixin arrow
-  h1.title 
+	
+	  
 
+	  
+
+
+				   
+  

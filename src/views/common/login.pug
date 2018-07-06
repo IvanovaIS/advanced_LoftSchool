@@ -1,35 +1,42 @@
-.login.js__rotate-card
+.login.js-login.js__rotate-card
 	.login__title
-		h2.login__title-txt Авторизуйтесь
+		h2.subtitle.login__title-txt Авторизуйтесь
 	
-	form.form-login#form-login
+	form.form-login#js-form-login
+		.js-error-login.js-error-login_login Введите логин
+		.js-error-login.js-error-login_password Введите пароль
+		.js-error-login.js-error-login_checkbox Вы не человек
+		.js-error-login.js-error-login_radio Вы не уверены, что Вы человек
+		.js-sucsess-login 
+			.js-sucsess-text Добро пожаловать!
+			button.js-suscess-btn(type="button") Привет!
 		.form-login__input-row
 			.form-login__input-before.form-login__input-before_login
-			input(type='text' class='form-login__input' name='form-login__login' placeholder='Логин')
+			input(type='text' class='form-login__input js-form-login_login' name='form-login__login' placeholder='Логин')
 		.form-login__input-row
 			.form-login__input-before.form-login__input-before_password
-			input(type='password' class='form-login__input' name='form-login__password' placeholder='Пароль')
+			input(type='password' class='form-login__input js-form-login_password' name='form-login__password' placeholder='Пароль')
 		.form-login__checkbox-block
 			label.form-login__checkbox-label
-				input(type='checkbox' id='checkbox__login' checked tabindex='0').form-login__checkbox 
+				input(type='checkbox' id='checkbox__login' checked tabindex='0' ).form-login__checkbox.js-form-login_checkbox 
 				.form-login__checkbox-custom
 				label.form-login__checkbox-text(for='checkbox__login') Я человек
 			
 		.form-login-robot Вы точно не робот?
 		.form-login-radio-row
 			label.form-login-radio-label
-				input.form-login-radio(type='radio' id='form-login-radio-yes' name='form-login-radio' value='yes' checked)
+				input.form-login-radio.js-form-login_radio(type='radio' id='form-login-radio-yes' name='form-login-radio' value='yes' checked)
 				.form-login-radio-block
 					.form-login-radio-custom(tabindex='0')
 					label.form-login-radio-text(for='form-login-radio-yes') Да
 				
 			label.form-login-radio-label
-				input(type='radio' id='form-login-radio-no' name='form-login-radio' value='no').form-login-radio
+				input(type='radio' id='form-login-radio-no' name='form-login-radio' value='no').form-login-radio.js-form-login_radio
 				.form-login-radio-block
 					.form-login-radio-custom(tabindex='0')
 					label.form-login-radio-text(for='form-login-radio-no') Не уверен
 				
 				
 		.form-login-buttons-row
-			button.form-login-button.form-login-button-main(type='button') На главную
+			button.form-login-button.form-login-button-main.js-tomain-btn(type='button') На главную
 			button.form-login-button.form-login-button-login(type='submit') Войти

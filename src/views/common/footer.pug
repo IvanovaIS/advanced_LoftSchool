@@ -1,20 +1,22 @@
-.footer-container
-  footer.footer
-    .footer__row.footer__row_top
-      .container.footer__container
-        .footer__col-left
-          ul.footer-menu
-            each item in ['Мои работы', 'Обо мне', "Блок", "Авторизация"]
-              li.footer-menu__item
-                a(href="#" class="footer-menu__link") #{item}
-        .footer__col-right
-          .footer__socials
-            +socials('socials_rounded')
-    .footer__row
-      .container.footer__container
-        .footer__col-left
-          .footer__text 
-            | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos neque, nobis optio perferendis atque, excepturi minus perspiciatis voluptatum, corporis ab odit accusantium doloribus est rerum! Iste quo doloremque non velit?
-        .footer__col-right
-          .footer__text
-            | © Ирина Иванова | создано с любовью в LoftSchool | 2018
+- var footerColor = 'footer_textcolor'
+
+footer.footer
+	.container
+		.footer__row-links
+			.footer__menu
+				include menu.pug
+			.footer__socials
+				- var SocialItems = [['round', 'https://vk.com/', 'vk_round'],['round', 'https://github.com/IvanovaIS', 'github_round'],['round','#', 'in_round']]
+					+socials(SocialItems, 'round' )
+	hr.footer__line
+	.container
+		.footer__row-content
+			.footer__column-left
+				.footer__content Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. 
+			.footer__column-right
+				include welcomefooter.pug
+		
+		
+	
+	
+	

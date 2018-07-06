@@ -1,0 +1,35 @@
+extends ../main.layout.pug
+
+block variables
+	- var title = 'my works'
+	- var headerTitle = 'Ирина Иванова'
+	- var headerText = 'Личный сайт веб разработчика'
+	- var headerContentClass = 'header__content'
+	- var headerTitleClass = 'header__title'
+	- var headerTextClass = 'header__text'
+	- var containerHeader = 'container__header'
+	- var headerMainBg = 'header__main_portfoliobg'
+	- var headerbgtext = 'portfolio'
+	- var wrapModif = ' '
+
+block scripts
+	script(src='js/works.bundle.js')
+	
+block arrow
+	.header__arrow-block
+		a.header__arrow-link(href="#")
+			include ../common/headerarrow.pug
+
+block content
+	.workspage
+		
+
+		.workspage__title
+			h2.title Мои работы
+		
+		include ../common/slider.pug
+		include ../common/aboutworks.pug
+		include ../common/arrowup.pug
+
+						
+	include ../common/footer.pug

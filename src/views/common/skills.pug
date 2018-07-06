@@ -1,14 +1,23 @@
--var skills = [['Frontend', [['Html5', 80], ['css3', 80], ['JavaScript & jQuery', 70]]],['Backend', [['PHP', 30], ['mySQL', 10], ['Node.js& npm', 30],['Mongo.db', 50]]],['Workflow', [['Git', 90], ['Gulp', 75], ['Bower', 70]]]]
+script(type="text/x-template")#skills-section
+	ul.skills-list(ref="skills-block" )
+		li.skills-list__item(v-for="skill in skillscontent") 
+			skillsRow(
+			:skill="skill"
+			)
 		
-		ul.skills-list
-			each skillsrow in skills
-				li.skills-list__item.skills-row
-					.skills-row__title #{skillsrow[0]}
-					ul.skills-row__list
-						each skill in skillsrow[1]
-							li.skills-row__item
-								figure.skill(data-percents="70")
-									svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-										circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-										circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above(class=`circle-${skill[1]}`)
-									.skill__title #{skill[0]}
+script(type="text/x-template")#skills-row
+	.skills-row
+		.skills-row__title {{skill.titleGruop}}
+		ul.skills-row__list
+			li.skills-row__item(v-for="(skillPercents, titleSkills) in skill.skillsCont")
+				skill(
+				:titleSkills="titleSkills"
+				:skillPercents="skillPercents"
+				)
+			
+script(type="text/x-template" )#skills-row-item
+	figure.skill(data-percents="70" ref="skill-item")
+		svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+			circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+			circle(cx="50" cy="50" r="40" ref="color-circle").skill__circle.skill__circle_above {{ skillPercents }}
+		.skill__title {{ titleSkills }}

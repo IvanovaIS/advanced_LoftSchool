@@ -1,24 +1,35 @@
 .contacts {
-  width: 380px;
-  background: rgba(#fff, .85);
-  border-radius: 5px;
-  padding: 35px 40px;
+	@include card;
+	padding: 2.1875rem;
+
+	@include phone {
+		background-color: #fff;
+		top: 15%;
+		left: 50%;
+		width: 100%;
+		border-radius: 0;
+
+	}
 }
 
 .contacts__title {
-  text-align: center;
-  margin-bottom: 40px;
+	text-align: center;
+	margin-bottom: 1.8rem;
+
+	.subtitle {
+		
+		&:before, &:after{
+			@include phone {
+				top: 1rem;
+			}
+		}
+		@include phone {
+			font-size: 2.1875rem;
+		}
+	}
 }
 
-.contacts__content {
-  font-size: 16px;
-  font-weight: 500;
-}
 
-.contacts__item {
-  display: flex;
-  margin-bottom: 25px;
-}
 
 .contacts__list {
 	display: -webkit-flex;
@@ -29,23 +40,35 @@
 	flex-direction: column;
 }
 
+.contacts__item {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	margin-bottom: 1.625rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
 .contacts__icon {
-  width: 26px;
-  height: 26px;
-  align-items: flex-start;
-  background-repeat: no-repeat;
-  background-position: center center;
-  margin-right: 10px;
+	margin-right: 0.625rem;
+}
 
-  &_skype {
-    background-image: svg-load('skype.svg', fill=$green);
-  }
+.contacts__icon-svg {
+	width: 25px;
+	height: 25px;
+	fill: #00bea4;
+}
 
-  &_envelope {
-    background-image: svg-load('envelope.svg', fill=$green);
-  }
+.contacts__contact {
+	text-decoration: none;
+}
 
-  &_phone {
-    background-image: svg-load('phone.svg', fill=$green);
-  }
+.contacts__contact-text {
+	color: rgba(#455a64, 0.8);
+	font-weight: 500;
 }

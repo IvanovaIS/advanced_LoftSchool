@@ -1,19 +1,22 @@
 
 header.header
+	img.header__bg.js-header-bg(src='assets/images/bg/bg.jpg' role='presentation')
 	div(class=`${containerHeader}`)
+		
 		.header__row
-			.header__row-left
-				- var SocialItems = [['', '#', 'vk'],['', 'https://github.com/IvanovaIS', 'github'],['','#', 'in']]
-					+socials(SocialItems)
-			.header__row-right
-				include hamburgermenu.pug
+			- var SocialItems = [['', 'https://vk.com', 'vk'],['', 'https://github.com/IvanovaIS', 'github'],['','#', 'in']]
+				+socials(SocialItems)
+			
+				
 
 						
 					
+		div.header__bgtext
+			+icon(`${headerbgtext}_header`, `header__bgtext-icon_${headerbgtext} js-header-bgtext`)
 			
-		div(class=`${headerMainBg}`)
+		div.js-header-content(class=`${headerMainBg}`)
 			.header__img
-				+image('content/IMG_photo.jpg', 'userpic', 'user-desc__avatar')
+				+image('content/IMG_photo.jpg', 'Аватар', 'header__ava')
 			div(class=`${headerContentClass}`)
 				h2(class=`${headerTitleClass}`) #{headerTitle}
 				div(class=`${headerTextClass}`) #{headerText}

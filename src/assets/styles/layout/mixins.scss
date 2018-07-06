@@ -1,6 +1,24 @@
 //@function rem($px){
 //	@return $px/16px + 0rem;
 //}
+
+@mixin netbook {
+	@media screen and (max-width: 1255px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media screen and (max-width: 1010px) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media screen and (max-width: 490px) {
+		@content;
+	}
+}
+
 @mixin card {
 	background-color: rgba(255, 255, 255, 0.85);
 	border-radius: 5px;
@@ -20,6 +38,8 @@
 	text-align: center;
 	padding: 0.96rem 1.94rem;
 	border-right: 2px solid #73cac3;
+	
+
 
 	&:last-child {
 		border-right: none;
@@ -38,6 +58,10 @@
 	display: inline;
 
 	position: relative;
+	
+	@include phone {
+		font-size: 2.1875rem;
+	}
 
 
 	&:before,
@@ -50,16 +74,20 @@
 
 		position: absolute;
 		top: 2.5rem;
-
+	
 	}
 
 	&:before {
 		left: -2.5rem;
+		@include phone {
+		
+	}
 	}
 
 
 	&:after {
 		right: -2.5rem;
+	
 	}
 }
 
@@ -72,6 +100,9 @@
 
 	position: relative;
 
+	@include phone {
+		font-size: 1.3125rem;
+	}
 
 	&:before,
 	&:after {
@@ -84,6 +115,9 @@
 		position: absolute;
 		top: 1.2rem;
 
+		@include phone {
+		top: 0.5rem;
+	}
 	}
 
 	&:before {
@@ -95,3 +129,10 @@
 		right: -2.5rem;
 	}
 }
+
+
+
+	
+
+
+	
